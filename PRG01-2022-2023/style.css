@@ -1,0 +1,52 @@
+body {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+    color: orange;
+}
+
+nav {
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+nav a {
+    background-color: white;
+    margin: 0 5px;
+    padding: 15px 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1 {
+    background-color: orange;
+    margin: 0;
+    padding: 15px;
+    color: white;
+}
+
+h2 {
+    background-color: orange;
+    margin: 0;
+    padding: 15px;
+    color: white;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+p {
+    padding: 20px;
+}
+
+img {
+    padding: 20px;
+}
+
+a {
+    color: darkorange;
+}
