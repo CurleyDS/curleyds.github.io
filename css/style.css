@@ -72,7 +72,7 @@ section {
 }
 
 section:last-of-type {
-    margin-bottom: 30vh;
+    margin-bottom: 33vh;
 }
 
 .form-input {
@@ -131,6 +131,10 @@ input, textarea, select {
         width: auto;
     }
 
+    section:last-of-type {
+        margin-bottom: 40vh;
+    }
+    
     .form-input,
     .form-input label {
         display: block;
