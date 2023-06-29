@@ -1,14 +1,22 @@
-body {
-    position: relative;
-    background-color: lightgrey;
-    margin : 0;
-    padding : 0;
-    font-family: arial;
-    color: black;
+
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    background-color: #212529;
+    margin : 0;
+    padding : 0;
+    min-height: 100%;
+    font-family: arial;
+    font-size: 1.3em;
+    color: black;
 }
 
 header {
@@ -16,12 +24,12 @@ header {
     justify-content: center;
     align-items: center;
     background-color: white;
-    background-image: url(../img/portfolio_picture.jfif), url(../img/cmgt_logo.webp);
+    background-image: url(../img/portfolio.jpeg), url(../img/cmgt_logo.webp);
     background-position: left, right;
     background-repeat: no-repeat, no-repeat;
-    background-size: 20% 100%, 80% 100%;
+    background-size: 40% 100%, 60% 100%;
     text-align: center;
-    height:40vh;
+    height:100vh;
     color: white;
 }
 
@@ -34,25 +42,25 @@ nav {
 }
 
 nav a {
-    background-color: #c40038;
-    padding: 10px;
+    background-color: white;
+    padding: 20px;
     width: 100%;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.2s;
-    color: white;
+    transition: background-color 0.25s;
+    color: #212529;
 }
 
 nav a:hover {
-    background-color: white;
-    color: #c40038;
+    background-color: maroon;
+    color: white;
 }
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 1500px;
     margin : 0 auto;
     padding: 10px;
     gap: 20px;
@@ -60,6 +68,11 @@ main {
 
 section {
     background-color:white;
+    border-radius: 15px;
+}
+
+section:last-of-type {
+    margin-bottom: 30vh;
 }
 
 .form-input {
@@ -68,14 +81,14 @@ section {
 }
 
 footer {
-    background-color: #c40038;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #7a8086;
     text-align: center;
     padding: 50px 0px;
-    color: white;
-}
-
-footer a {
-    color: white;
+    color: #212529;
 }
 
 footer ul {
@@ -86,19 +99,31 @@ footer ul {
 }
 
 footer li {
-    background-color: #b80434;
+    background-color: #212529;
     margin: 10px;
     border-radius: 15px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.2s;
+}
+
+footer a {
     color: white;
 }
 
+input, textarea, select {
+    padding: 2px;
+    font-size: 1.3em;
+}
+  
 @media (max-width:767px) {
+    body {
+        font-size: 1.5em;
+    }
+
     header {
-        background-size: 50% 100%, 50% 100%;
+        background-size: 100% 100%, 0% 100%;
     }
     
     nav, nav a, footer ul, footer li {
@@ -113,29 +138,43 @@ footer li {
 
     input, textarea, select {
         width: 100%;
+        font-size: 1em;
     }
 }
 
 h1 {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(33, 37, 41, 0.5);
     margin: 0;
     border-radius: 5px;
     padding: 5px;
 }
 
 h2 {
-    background-color: #b80434;
+    background-color: white;
+    border-radius: 15px;
     margin: 0;
     padding: 15px;
-    color: white;
+    color: maroon;
+}
+
+h3 {
+    background-color: white;
+    border-radius: 15px;
+    margin: 0;
+    padding: 15px;
+    color: #212529;
 }
 
 p {
-    padding: 20px;
+    padding: 0 20px;
 }
 
 a {
-    color: #b80434;
+    color: maroon;
+}
+
+ul {
+    list-style-type: '-  ';
 }
 
 form {
@@ -146,27 +185,23 @@ form div {
     margin: 5px;
 }
 
-input, textarea, select {
-  padding: 2px;
-  font-size: 1em;
-}
-
 button {
-    background-color: ##b80434;
+    background-color: white;
     margin: 20px 0;
     border: 1px solid;
     border-radius: 10px;
     padding: 10px 20px;
     width: 100%;
-    font-size: 1em;
-    color: white;
+    font-size: 1.3em;
+    transition: background-color 0.5s;
+    color: #212529;
 }
 
 button:hover {
-    background-color: white;
-    color: ##b80434;
+    background-color: #2125293d;
 }
 
 button:active {
-    background-color: #b80434;
+    background-color: #2125293d;
+    color: maroon;
 }
