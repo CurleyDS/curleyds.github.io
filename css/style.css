@@ -14,7 +14,7 @@ body {
     margin : 0;
     padding : 0;
     min-height: 100%;
-    font-family: arial;
+    font-family: 'Ysabeau Office', sans-serif;
     font-size: 1.3em;
     color: black;
 }
@@ -114,6 +114,7 @@ footer a {
 
 input, textarea, select {
     padding: 2px;
+    font-family: 'Ysabeau Office', sans-serif;
     font-size: 1.3em;
 }
   
@@ -196,6 +197,7 @@ button {
     border-radius: 10px;
     padding: 10px 20px;
     width: 100%;
+    font-family: 'Ysabeau Office', sans-serif;
     font-size: 1.3em;
     transition: background-color 0.5s;
     color: #212529;
