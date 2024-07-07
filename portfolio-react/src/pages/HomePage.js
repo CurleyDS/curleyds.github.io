@@ -1,13 +1,143 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import Navbar from '../components/NavComponent';
+import Slides from '../components/SwiperComponent';
 import ProfilePic from '../assets/profile.jpg';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import html from '../assets/html.jpg'
+import css from '../assets/css.jpg'
+import javascript from '../assets/javascript.jpg'
+import php from '../assets/php.jpg'
+import mysql from '../assets/mysql.jpg'
+import bootstrap from '../assets/bootstrap.jpg'
+import vuejs from '../assets/vuejs.jpg'
+import laravel from '../assets/laravel.jpg'
+import tailwindcss from '../assets/tailwindcss.jpg'
+import pixijs from '../assets/pixijs.jpg'
+import excaliburjs from '../assets/excaliburjs.jpg'
+import renpy from '../assets/renpy.jpg'
+import expressjs from '../assets/expressjs.jpg'
+import reactjs from '../assets/reactjs.jpg'
 
 function Home() {
     // const navigate = useNavigate();
+    const [languages, setLanguages] = useState([]);
+    const [frameworks, setFrameworks] = useState([]);
+    const [projects, setProjects] = useState([]);
+
+    useEffect(() => {
+        const data1 = [
+            {
+                img: html,
+                title: "HTML",
+                desc: null
+            },
+            {
+                img: css,
+                title: "CSS",
+                desc: null
+            },
+            {
+                img: javascript,
+                title: "JavaScript",
+                desc: null
+            },
+            {
+                img: php,
+                title: "PHP",
+                desc: null
+            },
+            {
+                img: mysql,
+                title: "MySQL",
+                desc: null
+            },
+            {
+                img: bootstrap,
+                title: "Bootstrap",
+                desc: null
+            },
+            {
+                img: vuejs,
+                title: "Vue.js",
+                desc: null
+            },
+            {
+                img: laravel,
+                title: "Laravel",
+                desc: null
+            },
+            {
+                img: tailwindcss,
+                title: "TailwindCSS",
+                desc: null
+            }
+        ];
+        setLanguages(data1);
+        
+        const data2 = [
+            {
+                img: pixijs,
+                title: "PixiJS",
+                desc: null
+            },
+            {
+                img: excaliburjs,
+                title: "ExcaliburJS",
+                desc: null
+            },
+            {
+                img: renpy,
+                title: "Ren'Py",
+                desc: null
+            },
+            {
+                img: expressjs,
+                title: "Express.js",
+                desc: null
+            },
+            {
+                img: reactjs,
+                title: "React.js",
+                desc: null
+            }
+        ];
+        setFrameworks(data2);
+        
+        const data3 = [
+            {
+                img: null,
+                title: "Onepager",
+                desc: "Project uit 2021 - 2022"
+            },
+            {
+                img: null,
+                title: "Pepperoni Party",
+                desc: "Project uit 2021 - 2022"
+            },
+            {
+                img: null,
+                title: "Space Meteors",
+                desc: "Project uit 2022 - 2023"
+            },
+            {
+                img: null,
+                title: "Factory Breakout",
+                desc: "Project uit 2022 - 2023"
+            },
+            {
+                img: null,
+                title: "Young Choices",
+                desc: "Project uit 2023 - 2024"
+            },
+            {
+                img: null,
+                title: "Weetjegezond",
+                desc: "Project uit 2023 - 2024 (Momenteel is dit project Private)"
+            }
+        ];
+        setProjects(data3);
+    }, []);
     
     return (
         <div>
@@ -16,7 +146,7 @@ function Home() {
             <main className='flex flex-col justify-center max-w-5xl mx-auto p-2 gap-5'>
                 {/* Section About Me */}
                 {/* Geef foto mee. */}
-                <section id="aboutme">
+                <section className='min-h-screen' id="aboutme">
                     <h2 className='p-4 text-2xl font-bold'>About Me</h2>
                     <hr />
                     <div className='flex flex-row'>
@@ -46,90 +176,22 @@ function Home() {
 
                 {/* Section Skills */}
                 {/* Maak het visueler. */}
-                <section id="skills">
+                <section className='min-h-screen' id="skills">
                     <h2 className='p-4 text-2xl font-bold'>Skills</h2>
                     <hr />
-                    <p className='p-5'>I'm skilled in the use of these coding languages and/or frameworks:</p>
+                    <p className='p-5'>I'm skilled in the use of coding languages and/or frameworks:</p>
                     {/* Toon lijst met logos van de programmeertalen en frameworks in plaats van */}
-                    <ul className='p-5'>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>PHP</li>
-                        <li>MySQL</li>
-                        <li>Bootstrap</li>
-                        <li>Vue.js</li>
-                        <li>Laravel</li>
-                        <li>TailwindCSS</li>
-                    </ul>
-                    <p className='p-5'>I have a little experience in working with these coding languages and/or frameworks:</p>
-                    <ul className='p-5'>
-                        <li>PixiJS</li>
-                        <li>ExcaliburJS</li>
-                        <li>Ren'Py</li>
-                        <li>Express.js</li>
-                        <li>React.js</li>
-                    </ul>
+                    <Slides data={languages} />
+                    <p className='p-5'>I have a little experience in working with other coding languages and/or frameworks as well:</p>
+                    <Slides data={frameworks} />
                 </section>
 
                 {/* Section Projects */}
-                <section id="projects">
+                <section className='min-h-screen' id="projects">
                     <h2 className='p-4 text-2xl font-bold'>Projects</h2>
                     <hr />
                     <p className='p-5'>These are projects I've worked on:</p>
-                    
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        navigation
-                        pagination={{ clickable: true }}
-                        scrollbar={{ draggable: true }}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        onSlideChange={() => console.log('slide change')}
-                    >
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Onepager</h3>
-                                <p>Project uit 2021 - 2022</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Pepperoni Party</h3>
-                                <p>Project uit 2021 - 2022</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Space Meteors</h3>
-                                <p>Project uit 2022 - 2023</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Factory Breakout</h3>
-                                <p>Project uit 2022 - 2023</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Young Choices</h3>
-                                <p>Project uit 2023 - 2024</p>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='p-5'>
-                                {/* <img src={Project1Image} alt="Project 1" className='rounded-lg shadow-lg max-w-full h-auto' /> */}
-                                <h3 className='p-4'>Weetjegezond</h3>
-                                <p>Project uit 2023 - 2024 (Momenteel is dit project Private)</p>
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
+                    <Slides data={projects} />
                     
                     {/* Slide menu met afbeelding van project. Link gaat naar project. Github icoon rechtsonder leidt naar Github Repository. */}
                 </section>
@@ -140,13 +202,13 @@ function Home() {
             <footer className='text-center py-12'>
                 <ul className='flex justify-center p-0'>
                     <li className='m-2 rounded-2xl text-center px-2 py-5'>
-                        <button>Instagram</button>
+                        <a target="_blank" href="https://www.instagram.com/dylan_cmgt/" rel="noopener noreferrer">Instagram</a>
                     </li>
                     <li className='m-2 rounded-2xl text-center px-2 py-5'>
-                        <button>LinkedIn</button>
+                        <a target="_blank" href="https://www.linkedin.com/in/dylan-schoop-b5b753174/" rel="noopener noreferrer">LinkedIn</a>
                     </li>
                     <li className='m-2 rounded-2xl text-center px-2 py-5'>
-                        <button>Github</button>
+                        <a target="_blank" href="https://www.github.com/curleyds" rel="noopener noreferrer">Github</a>
                     </li>
                 </ul>
                 <button>Back to top</button>
