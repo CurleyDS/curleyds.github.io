@@ -9,7 +9,7 @@ function Navbar() {
     };
 
     return (
-        <nav className='sticky flex justify-center'>
+        <nav className='sticky top-0 flex justify-center'>
             <button
                 className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'
                 onClick={() => navigate('/')}

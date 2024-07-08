@@ -25,8 +25,8 @@ function Slides({ data = [] }) {
         >
             {data.map((item, index) => (
                 <SwiperSlide key={index}>
-                    <div className='flex justify-center p-5'>
-                        {/* {item.img && <img src={item.img} alt={item.title} />} */}
+                    <div className='flex flex-col justify-center p-5 h-[33vh]'>
+                        {item.img && <img src={item.img} alt={item.title} className='h-full object-scale-down' />}
                         {item.title && <h3 className='p-5'>{item.title}</h3>}
                         {item.desc && <p className='p-5'>{item.desc}</p>}
                     </div>

@@ -18,6 +18,12 @@ import excaliburjs from '../assets/excaliburjs.jpg'
 import renpy from '../assets/renpy.jpg'
 import expressjs from '../assets/expressjs.jpg'
 import reactjs from '../assets/reactjs.jpg'
+import onepager from '../assets/onepager.jpg'
+import pepperoniparty from '../assets/pepperoniparty.jpg'
+import spacemeteors from '../assets/spacemeteors.jpg'
+import factorybreakout from '../assets/factorybreakout.jpg'
+import youngchoices from '../assets/youngchoices.jpg'
+import weetjegezond from '../assets/weetjegezond.jpg'
 
 function Home() {
     // const navigate = useNavigate();
@@ -106,32 +112,32 @@ function Home() {
         
         const data3 = [
             {
-                img: null,
+                img: onepager,
                 title: "Onepager",
                 desc: "Project uit 2021 - 2022"
             },
             {
-                img: null,
+                img: pepperoniparty,
                 title: "Pepperoni Party",
                 desc: "Project uit 2021 - 2022"
             },
             {
-                img: null,
+                img: spacemeteors,
                 title: "Space Meteors",
                 desc: "Project uit 2022 - 2023"
             },
             {
-                img: null,
+                img: factorybreakout,
                 title: "Factory Breakout",
                 desc: "Project uit 2022 - 2023"
             },
             {
-                img: null,
+                img: youngchoices,
                 title: "Young Choices",
                 desc: "Project uit 2023 - 2024"
             },
             {
-                img: null,
+                img: weetjegezond,
                 title: "Weetjegezond",
                 desc: "Project uit 2023 - 2024 (Momenteel is dit project Private)"
             }
