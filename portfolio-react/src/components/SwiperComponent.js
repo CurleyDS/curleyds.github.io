@@ -27,7 +27,13 @@ function Slides({ data = [] }) {
                 <SwiperSlide key={index}>
                     <div className='flex flex-col justify-center p-5 h-[33vh]'>
                         {item.img && <img src={item.img} alt={item.title} className='h-full object-scale-down' />}
-                        {item.title && <h3 className='p-5'>{item.title}</h3>}
+                        {item.title && (
+                            item.link ? (
+                                <a target="_blank" href={item.link} className='p-5' rel="noopener noreferrer">{item.title}</a>
+                            ) : (
+                                <h3 className='p-5'>{item.title}</h3>
+                            )
+                        )}
                         {item.desc && <p className='p-5'>{item.desc}</p>}
                     </div>
                 </SwiperSlide>
