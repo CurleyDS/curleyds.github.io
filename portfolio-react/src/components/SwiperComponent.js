@@ -1,6 +1,5 @@
 // import Swiper core and required modules
 import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -22,19 +21,13 @@ function Slides({ data = [] }) {
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
+            className='h-full'
         >
             {data.map((item, index) => (
-                <SwiperSlide key={index}>
-                    <div className='flex flex-col justify-center p-5 h-[33vh]'>
-                        {item.img && <img src={item.img} alt={item.title} className='h-full object-scale-down' />}
-                        {item.title && (
-                            item.link ? (
-                                <a target="_blank" href={item.link} className='p-5' rel="noopener noreferrer">{item.title}</a>
-                            ) : (
-                                <h3 className='p-5'>{item.title}</h3>
-                            )
-                        )}
-                        {item.desc && <p className='p-5'>{item.desc}</p>}
+                <SwiperSlide key={index} className='flex flex-col justify-center'>
+                    <div className='flex flex-col justify-center p-5'>
+                        {item.img && <img src={item.img} alt={item.title} className='relative object-scale-down h-64 mx-auto p-5' />}
+                        {item.title && <h3 className='absolute left-0 bottom-0 p-5'>{item.title}</h3>}
                     </div>
                 </SwiperSlide>
             ))}

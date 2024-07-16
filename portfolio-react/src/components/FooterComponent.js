@@ -1,8 +1,8 @@
 import React from 'react';
 
 function Navbar() {
-    const scrollToSection = (section) => {
-        document.getElementById(section).scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = () => {
+        document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -19,7 +19,7 @@ function Navbar() {
                     <a target="_blank" href="https://www.github.com/curleyds" rel="noopener noreferrer">Github</a>
                 </li>
             </ul>
-            <button onClick={() => scrollToSection('top')}>Back to top</button>
+            <button onClick={() => scrollToSection()}>Back to top</button>
         </footer>
     );
 }
