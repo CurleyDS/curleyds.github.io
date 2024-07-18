@@ -31,7 +31,7 @@ function Slides({ data = [] }) {
                         {item.img && <img src={item.img} alt={item.title} className='relative object-scale-down h-64 mx-auto p-5' />}
                         {item.title && <h3 className='absolute left-0 bottom-0 p-5'>{item.title}</h3>}
                         {item.link && <a href={item.link} target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub} className='absolute right-0 bottom-0 p-5' size='2x' />
+                            <FontAwesomeIcon icon={faGithub} className='absolute right-0 bottom-0 p-5' title='Go to Github Project' size='2x' />
                         </a>}
                     </div>
                 </SwiperSlide>
