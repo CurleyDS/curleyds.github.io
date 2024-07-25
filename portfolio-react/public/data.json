@@ -106,28 +106,28 @@
             "img": "assets/onepager.jpg",
             "title": "Onepager",
             "desc": "Project uit 2021 - 2022",
-            "project_link": null,
+            "project_link": "projects/onepager-2021-2022/",
             "github_link": "https://github.com/CurleyDS/onepager"
         },
         {
             "img": "assets/pepperoniparty.jpg",
             "title": "Pepperoni Party",
             "desc": "Project uit 2021 - 2022",
-            "project_link": null,
+            "project_link": "projects/CLE4-2021-2022/",
             "github_link": "https://github.com/CurleyDS/CLE4"
         },
         {
             "img": "assets/spacemeteors.jpg",
             "title": "Space Meteors",
             "desc": "Project uit 2022 - 2023",
-            "project_link": null,
+            "project_link": "projects/PRG04-2022-2023/",
             "github_link": "https://github.com/CurleyDS/PRG04-2022-2023"
         },
         {
             "img": "assets/factorybreakout.jpg",
             "title": "Factory Breakout",
             "desc": "Project uit 2022 - 2023",
-            "project_link": null,
+            "project_link": "projects/CLE4-2022-2023/",
             "github_link": "https://github.com/CurleyDS/CLE4-2023"
         },
         {

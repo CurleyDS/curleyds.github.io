@@ -12,6 +12,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function Slides({ data = [] }) {
+    function projectLink(project_link) {
+        if (project_link.includes("http://") || project_link.includes("https://")) {
+            return project_link;
+        } else {
+            return window.location.href + project_link;
+        }
+    }
+
     return (
         <Swiper
             // install Swiper modules
@@ -29,9 +37,9 @@ function Slides({ data = [] }) {
                 <SwiperSlide key={index} className='flex flex-col justify-center'>
                     <div className='flex flex-col justify-center p-5'>
                         {item.img && (item.project_link ? (
-                            <a href={item.project_link} target="_blank" rel="noopener noreferrer" title='Go to Project'>
-                            <img src={item.img} alt={item.title} className='relative object-scale-down h-64 mx-auto p-5' />
-                        </a>
+                            <a href={projectLink(item.project_link)} target="_blank" rel="noopener noreferrer" title='Go to Project'>
+                                <img src={item.img} alt={item.title} className='relative object-scale-down h-64 mx-auto p-5' />
+                            </a>
                         ) : (
                             <img src={item.img} alt={item.title} className='relative object-scale-down h-64 mx-auto p-5' />
                         ))}

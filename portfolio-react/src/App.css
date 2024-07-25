@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom styles for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0.15);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
+}
