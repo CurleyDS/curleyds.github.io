@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 function Navbar() {
     const scrollToSection = () => {
@@ -19,7 +20,7 @@ function Navbar() {
                     <a target="_blank" href="https://www.github.com/curleyds" rel="noopener noreferrer">Github</a>
                 </li>
             </ul>
-            <button onClick={() => scrollToSection()}>Back to top</button>
+            <button onClick={() => scrollToSection()}><FormattedMessage id='footerTop' defaultMessage="Terug naar boven" /></button>
         </footer>
     );
 }

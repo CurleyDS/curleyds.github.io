@@ -1,23 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './fontAwesome';
+import { IntlProvider } from 'react-intl';
+import { messages } from './i18n/messages';
 import Home from './pages/HomePage';
 import Contact from './pages/ContactPage';
+import Navbar from './components/NavComponent';
+import Footer from './components/FooterComponent';
 
-function App() {
+function App({ switchLocale }) {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <>
+            {/* Navigation Bar */}
+            <Navbar switchLocale={switchLocale} />
+
+            {/* Main */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+
+            {/* Footer */}
+            <Footer />
+        </>
     );
 }
 
 function AppWrapper() {
+    const [locale, setLocale] = useState('nl'); // default locale
+
+    const switchLocale = (newLocale) => {
+        setLocale(newLocale);
+    };
+
     return (
-        <Router>
-            <App />
-        </Router>
+        <IntlProvider locale={locale} messages={messages[locale]}>
+            <Router>
+                <App switchLocale={switchLocale} />
+            </Router>
+        </IntlProvider>
     );
 }
 
