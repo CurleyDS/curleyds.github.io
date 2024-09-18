@@ -59,18 +59,23 @@ function Home() {
                 <div className='flex flex-row'>
                     <div>
                         <p className='p-5'>
-                            <FormattedMessage id='introduction' defaultMessage={`Hallo! Mijn naam is Dylan Schoop en ik kom uit Nederland. Ik ben geboren in
-                                Eindhoven. Ik woon in Zwijndrecht. Ik heb een passie voor games en entertainment.
-                                Mijn hobby's zijn naar de sportschool gaan, gamen, shows kijken en mezelf uiten
-                                door te tekenen, naar muziek te luisteren en gitaar te spelen.
+                            <FormattedMessage
+                                id='introduction'
+                                defaultMessage={
+                                    `Hallo! Mijn naam is Dylan Schoop en ik kom uit Nederland. Ik ben geboren in
+                                    Eindhoven. Ik woon in Zwijndrecht. Ik heb een passie voor games en entertainment.
+                                    Mijn hobby's zijn naar de sportschool gaan, gamen, shows kijken en mezelf uiten
+                                    door te tekenen, naar muziek te luisteren en gitaar te spelen.
 
-                                Ik heb Software Development gestudeerd aan het Da Vinci College en volg momenteel mijn
-                                studies in Creative Media and Game Technologies (CMGT) aan de Hogeschool Rotterdam.
+                                    Ik heb Software Development gestudeerd aan het Da Vinci College en volg momenteel mijn
+                                    studies in Creative Media and Game Technologies (CMGT) aan de Hogeschool Rotterdam.
 
-                                Of ik nu intrigerende spellen speel, me verdiep in een boeiende show of mijn
-                                verbeelding kanaliseer door eenvoudige tekeningen, ik hou ervan mijn creativiteit te ontketenen in projecten.
-                                Mijn doel is om deze passie voor gaming en creativiteit te kanaliseren in een carrière in game
-                                ontwikkeling of sociale media.`} />
+                                    Of ik nu intrigerende spellen speel, me verdiep in een boeiende show of mijn
+                                    verbeelding kanaliseer door eenvoudige tekeningen, ik hou ervan mijn creativiteit te ontketenen in projecten.
+                                    Mijn doel is om deze passie voor gaming en creativiteit te kanaliseren in een carrière in game
+                                    ontwikkeling of sociale media.`
+                                }
+                            />
                         </p>
                     </div>
                     <div>

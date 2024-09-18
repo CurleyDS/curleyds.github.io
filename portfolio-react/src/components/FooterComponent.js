@@ -11,10 +11,10 @@ function Navbar() {
             {/* Iconen tonen in plaats van links. */}
             <ul className='flex justify-center p-0'>
                 <li className='m-2 rounded-2xl text-center px-2 py-5'>
-                    <a target="_blank" href="https://www.instagram.com/dylan_cmgt/" rel="noopener noreferrer">Instagram</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dylan-schoop-b5b753174/" rel="noopener noreferrer">LinkedIn</a>
                 </li>
                 <li className='m-2 rounded-2xl text-center px-2 py-5'>
-                    <a target="_blank" href="https://www.linkedin.com/in/dylan-schoop-b5b753174/" rel="noopener noreferrer">LinkedIn</a>
+                    <a target="_blank" href="https://www.instagram.com/dylan_cmgt/" rel="noopener noreferrer">Instagram</a>
                 </li>
                 <li className='m-2 rounded-2xl text-center px-2 py-5'>
                     <a target="_blank" href="https://www.github.com/curleyds" rel="noopener noreferrer">Github</a>
