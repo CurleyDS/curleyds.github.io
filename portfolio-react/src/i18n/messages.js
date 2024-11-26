@@ -7,18 +7,18 @@ export const messages = {
         navContact: "Contact",
         aboutTitle: "Over Mij",
         translation: "Talen",
-        introduction: `Hallo! Mijn naam is Dylan Schoop en ik kom uit Nederland. Ik ben geboren in
-            Eindhoven. Ik woon in Zwijndrecht. Ik heb een passie voor games en entertainment.
-            Mijn hobby's zijn naar de sportschool gaan, gamen, shows kijken en mezelf uiten
-            door te tekenen, naar muziek te luisteren en gitaar te spelen.
+        introduction: `Hallo! Mijn naam is Dylan Schoop. Ik ben een derdejaars student van de opleiding
+            Creative Media & Game Technologies (CMGT) aan de Hogeschool Rotterdam. Ook heb ik
+            een mbo diploma in Software Development tijdens mijn studie aan het Da Vinci College.
 
-            Ik heb Software Development gestudeerd aan het Da Vinci College en volg momenteel mijn
-            studies in Creative Media and Game Technologies (CMGT) aan de Hogeschool Rotterdam.
+            Als Creative Developer heb ik kennis opgedaan van programmeren en ontwikkelen. Ik
+            heb ervaring met HTML, CSS, Javascript, PHP en SQL, evenals frameworks zoals React,
+            Vue.js, Laravel en Node.js. Ook heb ik een beetje ervaring met Python en Unity. Mijn
+            meest recente project is een app die gebruikmaakt van Gamificatie.
 
-            Of ik nu intrigerende spellen speel, me verdiep in een boeiende show of mijn
-            verbeelding kanaliseer door eenvoudige tekeningen, ik hou ervan mijn creativiteit te ontketenen in projecten.
-            Mijn doel is om deze passie voor gaming en creativiteit te kanaliseren in een carrière in game
-            ontwikkeling of sociale media.`,
+            Mijn hobby's zijn sporten, gamen, shows kijken, tekenen, naar muziek te luisteren
+            en af en toe gitaar te spelen. Mijn doel is om van deze hobby's en creativiteit
+            gebruik te maken in Serious Games.`,
         skillsTitle: "Vaardigheden",
         coding: "Ik ben vaardig in het gebruik van codeertalen en/of frameworks:",
         frameworks: "Ik heb ook wat ervaring met andere codeertalen en/of frameworks:",
@@ -38,18 +38,18 @@ export const messages = {
         navContact: "Contact",
         aboutTitle: "About Me",
         translation: "Languages",
-        introduction: `Hello! My name is Dylan Schoop and I'm from the Netherlands. I was born in
-            Eindhoven. I live in Zwijndrecht. I have a passion for games and entertainment.
-            My hobbies are going to the gym, playing games, watching shows, and expressing
-            myself through drawing, listening music and playing guitar.
+        introduction: `Hello! My name is Dylan Schoop. I am a third year student of the course
+            Creative Media & Game Technologies (CMGT) at Rotterdam University of Applied Sciences. I also have
+            an MBO diploma in Software Development during my studies at Da Vinci College.
 
-            I studied Software Development at Da Vinci College and am currently pursuing my
-            studies in Creative Media and Game Technologies (CMGT) at Hogeschool Rotterdam.
-            
-            Whether I'm playing intriguing games, diving into a captivating show, or channeling
-            my imagination through simple drawings, I love to unleash my creativity on projects.
-            My goal is to channel this passion for gaming and creativity into a career in game
-            development or social media.`,
+            As a Creative Developer I have gained knowledge of programming and development. I
+            have experience with HTML, CSS, Javascript, PHP and SQL, as well as frameworks such as React,
+            Vue.js, Laravel and Node.js. I also have some experience with Python and Unity. My
+            most recent project is an app that uses Gamification.
+
+            My hobbies are sports, gaming, watching shows, drawing, listening to music
+            and occasionally playing guitar. My goal is to enjoy these hobbies and creativity
+            to use in Serious Games.`,
         skillsTitle: "Skills",
         coding: "I'm skilled in the use of coding languages and/or frameworks:",
         frameworks: "I have a little experience in working with other coding languages and/or frameworks as well:",

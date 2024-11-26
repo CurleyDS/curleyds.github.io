@@ -62,20 +62,24 @@ function Home() {
                             <FormattedMessage
                                 id='introduction'
                                 defaultMessage={
-                                    `Hallo! Mijn naam is Dylan Schoop en ik kom uit Nederland. Ik ben geboren in
-                                    Eindhoven. Ik woon in Zwijndrecht. Ik heb een passie voor games en entertainment.
-                                    Mijn hobby's zijn naar de sportschool gaan, gamen, shows kijken en mezelf uiten
-                                    door te tekenen, naar muziek te luisteren en gitaar te spelen.
+                                    `Hallo! Mijn naam is Dylan Schoop. Ik ben een derdejaars student van de opleiding
+                                    Creative Media & Game Technologies (CMGT) aan de Hogeschool Rotterdam. Ook heb ik
+                                    een mbo diploma in Software Development tijdens mijn studie aan het Da Vinci College.
 
-                                    Ik heb Software Development gestudeerd aan het Da Vinci College en volg momenteel mijn
-                                    studies in Creative Media and Game Technologies (CMGT) aan de Hogeschool Rotterdam.
+                                    Als Creative Developer heb ik kennis opgedaan van programmeren en ontwikkelen. Ik
+                                    heb ervaring met HTML, CSS, Javascript, PHP en SQL, evenals frameworks zoals React,
+                                    Vue.js, Laravel en Node.js. Ook heb ik een beetje ervaring met Python en Unity. Mijn
+                                    meest recente project is een app die gebruikmaakt van Gamificatie.
 
-                                    Of ik nu intrigerende spellen speel, me verdiep in een boeiende show of mijn
-                                    verbeelding kanaliseer door eenvoudige tekeningen, ik hou ervan mijn creativiteit te ontketenen in projecten.
-                                    Mijn doel is om deze passie voor gaming en creativiteit te kanaliseren in een carrière in game
-                                    ontwikkeling of sociale media.`
+                                    Mijn hobby's zijn sporten, gamen, shows kijken, tekenen, naar muziek te luisteren
+                                    en af en toe gitaar te spelen. Mijn doel is om van deze hobby's en creativiteit
+                                    gebruik te maken in Serious Games.`
                                 }
                             />
+                            {/* Stel jezelf voor een geef aan wat je kan! Zie mails en motivatie als voorbeeld. */}
+                            {/* Derde kopje omveranderen dat je een creative developer bent en dat je een meer creatieve kant
+                            van Software Development op wilt. Geef later in één zin aan dat je doel eindigt als iemand die Serious Games ontwikkelt. */}
+                            {/* Waarvoor heb je voor creativiteit in de opleiding gekozen? */}
                         </p>
                     </div>
                     <div>
@@ -108,6 +112,7 @@ function Home() {
                     <p className='p-5'>Loading slides...</p>
                 )}
             </section>
+            {/* Beschrijf dit in je projecten. Laat zien dat je dit in je projecten kunt doen. Som het later op! */}
 
             {/* Section Projects */}
             <section className='min-h-screen flex flex-col' id="projects">
@@ -123,9 +128,12 @@ function Home() {
                 ) : (
                     <p className='p-5'>Loading slides...</p>
                 )}
-                
-                {/* Slide menu met afbeelding van project. Link gaat naar project. Github icoon rechtsonder leidt naar Github Repository. */}
             </section>
+            {/* Verander om dat je minder hoeft te klikken. Misschien naar nieuwe pagina navigeren. Laat hierin zien wat je kunt! */}
+            {/* Toon projecten waar je trots op bent! Andere projecten kun je tonen in de een Overig lijst */}
+            {/* Haal links eruit. Werken toch niet. Gebruik afbeeldingen. */}
+
+            {/* Reflecteer welke vaardigheden je hebt opgedaan door je projecten. */}
         </main>
     );
 }
