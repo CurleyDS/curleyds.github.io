@@ -34,9 +34,9 @@ function Project() {
                 {error && <p>Error: {error.message}</p>}
             </section>
             
-            {/* Section Contact */}
+            {/* Section Projects */}
             <section>
-                <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='projectTitle' defaultMessage="Projects" /></h2>
+                <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='projectsTitle' defaultMessage="Projecten" /></h2>
                 
                 <hr />
                 

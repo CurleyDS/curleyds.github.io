@@ -1,34 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useIntl } from 'react-intl';
+import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function List({ data = [], favorite = false }) {
-    const [list, setList] = useState(null);
+    const intl = useIntl();
+    const currentLocale = intl.locale;
+  
     const [currentKey, setCurrentKey] = useState(null);
 
     const toggleDetails = (key) => {
-        console.log(key);
-        // ask ChatGPT
-        if (currentKey !== key) {
-            const item = list[key];
-
-            item.getElementById('itemDetails').classList.remove("hidden");
-        } else {
-            const item = list[currentKey];
-
-            item.getElementById('itemDetails').classList.add("hidden");
-        }
+        setCurrentKey((prevKey) => (prevKey === key ? null : key));
     };
     
-    useEffect(() => {
-        setList(document.getElementById('list'));
-    }, []);
-    
     return (
-        <ul id='list'>
+        <ul>
             {data.filter((item) => !favorite || item.favoritized).map((item, index) => (
                 <li key={index}>
-                    <span id='item' className='flex flex-row w-full items-center'>
+                    <span className='flex flex-row w-full items-center'>
                         <div className='flex flex-row flex-1' onClick={() => toggleDetails(index)}>
                             <div className='p-5'>
                                 <img src={item.img} alt={item.title} className='object-scale-down h-32 w-64' />
@@ -38,7 +28,7 @@ function List({ data = [], favorite = false }) {
                                     <h3>{item.title}</h3>
                                 </div>
                                 <div className='flex items-center'>
-                                    <h3>{item.desc}</h3>
+                                    {item.summary !== null && <p>{item.summary[currentLocale]}</p>}
                                 </div>
                             </div>
                         </div>
@@ -48,17 +38,26 @@ function List({ data = [], favorite = false }) {
                             </a>}
                         </div>
                     </span>
-                    <span id='itemDetails' className='flex items-start justify-center w-full min-h-screen hidden'>
+                    <span className={`flex items-start justify-center w-full transform transition-all duration-500 ease-in-out ${
+                        currentKey === index
+                            ? "opacity-100 scale-100 h-auto"
+                            : "opacity-0 scale-95 h-0 overflow-hidden"
+                        }`}
+                    >
                         <div className='flex flex-col'>
                             <div className='flex justify-center p-5'>
                                 <img src={item.img} alt={item.title} className='object-scale-down h-64' />
                             </div>
                             <div className='flex flex-col p-5 text-left'>
                                 <div className='flex items-center'>
-                                    <h3 className='text-left'>{item.title}</h3>
+                                    <h2 className='text-2xl font-bold text-left'>{item.title}</h2>
                                 </div>
                                 <div className='flex items-center'>
-                                    <h3 className='text-left'>{item.desc}</h3>
+                                    {item.description && (
+                                        <ReactMarkdown className="text-left">
+                                            {item.description[currentLocale]}
+                                        </ReactMarkdown>
+                                    )}
                                 </div>
                             </div>
                         </div>

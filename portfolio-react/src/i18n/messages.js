@@ -9,19 +9,18 @@ export const messages = {
         translation: "Talen",
         introduction: `Hallo! Mijn naam is Dylan Schoop. Ik ben een derdejaars student van de opleiding
             Creative Media & Game Technologies (CMGT) aan de Hogeschool Rotterdam. Ook heb ik
-            een mbo diploma in Software Development tijdens mijn studie aan het Da Vinci College.
-
+            een mbo diploma in Software Development tijdens mijn studie aan het Da Vinci College.\n
             Als Creative Developer heb ik kennis opgedaan van programmeren en ontwikkelen. Ik
             heb ervaring met HTML, CSS, Javascript, PHP en SQL, evenals frameworks zoals React,
             Vue.js, Laravel en Node.js. Ook heb ik een beetje ervaring met Python en Unity. Mijn
-            meest recente project is een app die gebruik maakt van Gamificatie.
-
+            meest recente project is een app die gebruik maakt van Gamificatie.\n
             Mijn hobby's zijn sporten, gamen, shows kijken, tekenen, naar muziek te luisteren
-            en af en toe gitaar te spelen. Mijn doel is om van deze hobby's en creativiteit
-            gebruik te maken in Serious Games.`,
+            en af en toe gitaar te spelen.\n
+            Mijn doel is om van deze hobby's en creativiteit gebruik te maken in Serious Games.`,
         projectsTitle: "Projecten",
         recentProjects: "Hier zijn mijn meest recente projecten waar ik aan heb gewerkt:",
         bestProjects: "Hier zijn mijn beste projecten waar ik aan heb gewerkt:",
+        moreProjects: "Klik hier als u meer projecten wilt zien",
         skillsTitle: "Vaardigheden",
         coding: "Ik ben vaardig in het gebruik van codeertalen en/of frameworks:",
         frameworks: "Ik heb ook wat ervaring met andere codeertalen en/of frameworks:",
@@ -54,6 +53,7 @@ export const messages = {
         projectsTitle: "Projects",
         recentProjects: "Here are my most recent projects I've worked on:",
         bestProjects: "Here are my best projects I've worked on:",
+        moreProjects: "Click here if you want to see more projects",
         skillsTitle: "Skills",
         coding: "I'm skilled in the use of coding languages and/or frameworks:",
         frameworks: "I have a little experience in working with other coding languages and/or frameworks as well:",

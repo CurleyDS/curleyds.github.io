@@ -57,12 +57,12 @@ function Home() {
                 
                 <hr />
                 
-                <div className='flex flex-row py-4'>
+                <div className='flex flex-row items-center py-4'>
                     <div className='px-4'>
-                        <img src={prflpic} alt="Portfolio" className='max-w-full h-auto rounded-lg shadow-lg' />
+                        <img src={prflpic} alt="Portfolio" className='object-scale-down max-w-56 h-auto rounded-lg shadow-lg' />
                     </div>
                     <div className='px-4'>
-                        <p>
+                        <p className='whitespace-pre-line'>
                             <FormattedMessage
                                 id='introduction'
                                 defaultMessage={
@@ -103,7 +103,7 @@ function Home() {
                         ) : (
                             <p>Loading projects...</p>
                         )}
-                        <button className='underline text-orange-700' onClick={() => navigate('/projects')}>Click here if you want to see more projects</button>
+                        <button className='underline text-orange-700' onClick={() => navigate('/projects')}><FormattedMessage id='moreProjects' defaultMessage="Projecten" /></button>
                     </div>
                 </div>
             </section>
