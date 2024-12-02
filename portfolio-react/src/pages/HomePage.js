@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
-import Slides from '../components/SwiperComponent';
+import List from '../components/ListComponent';
 import prflpic from '../assets/profile.jpg';
 
 function Home() {
+    const navigate = useNavigate();
     const { hash } = useLocation();
 
     const [languages, setLanguages] = useState([]);
@@ -56,9 +57,12 @@ function Home() {
                 
                 <hr />
                 
-                <div className='flex flex-row'>
-                    <div>
-                        <p className='p-5'>
+                <div className='flex flex-row py-4'>
+                    <div className='px-4'>
+                        <img src={prflpic} alt="Portfolio" className='max-w-full h-auto rounded-lg shadow-lg' />
+                    </div>
+                    <div className='px-4'>
+                        <p>
                             <FormattedMessage
                                 id='introduction'
                                 defaultMessage={
@@ -69,7 +73,7 @@ function Home() {
                                     Als Creative Developer heb ik kennis opgedaan van programmeren en ontwikkelen. Ik
                                     heb ervaring met HTML, CSS, Javascript, PHP en SQL, evenals frameworks zoals React,
                                     Vue.js, Laravel en Node.js. Ook heb ik een beetje ervaring met Python en Unity. Mijn
-                                    meest recente project is een app die gebruikmaakt van Gamificatie.
+                                    meest recente project is een app die gebruik maakt van Gamificatie.
 
                                     Mijn hobby's zijn sporten, gamen, shows kijken, tekenen, naar muziek te luisteren
                                     en af en toe gitaar te spelen. Mijn doel is om van deze hobby's en creativiteit
@@ -82,11 +86,31 @@ function Home() {
                             {/* Waarvoor heb je voor creativiteit in de opleiding gekozen? */}
                         </p>
                     </div>
-                    <div>
-                        <img src={prflpic} alt="Portfolio" className='rounded-lg shadow-lg max-w-full h-auto' />
+                </div>
+            </section>
+
+            {/* Section Projects */}
+            <section className='min-h-screen flex flex-col' id="projects">
+                <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='projectsTitle' defaultMessage="Projecten" /></h2>
+                
+                <hr />
+                
+                <div className='flex flex-col py-4'>
+                    <div className='px-4'>
+                        <p><FormattedMessage id='bestProjects' defaultMessage="Hier zijn mijn beste projecten waar ik aan heb gewerkt:" /></p>
+                        {loading ? (
+                            <List data={projects} favorite={true} />
+                        ) : (
+                            <p>Loading projects...</p>
+                        )}
+                        <button className='underline text-orange-700' onClick={() => navigate('/projects')}>Click here if you want to see more projects</button>
                     </div>
                 </div>
             </section>
+            {/* Verander om dat je minder hoeft te klikken. Misschien naar nieuwe pagina navigeren. Laat hierin zien wat je kunt! */}
+            {/* Toon projecten waar je trots op bent! Andere projecten kun je tonen in de een Overig lijst */}
+            {/* Haal links eruit. Werken toch niet. Gebruik afbeeldingen. */}
+            {/* Reflecteer welke vaardigheden je hebt opgedaan door je projecten. */}
 
             {/* Section Skills */}
             <section className='min-h-screen flex flex-col' id="skills">
@@ -97,7 +121,7 @@ function Home() {
                 <p className='p-5'><FormattedMessage id='coding' defaultMessage="Ik ben vaardig in het gebruik van codeertalen en/of frameworks:" /></p>
                 {loading ? (
                     <div className='flex-1'>
-                        <Slides data={languages} />
+                        <List data={languages} />
                     </div>
                 ) : (
                     <p className='p-5'>Loading slides...</p>
@@ -106,16 +130,38 @@ function Home() {
                 <p className='p-5'><FormattedMessage id='frameworks' defaultMessage="Ik heb ook wat ervaring met andere codeertalen en/of frameworks:" /></p>
                 {loading ? (
                     <div className='flex-1'>
-                        <Slides data={frameworks} />
+                        <List data={frameworks} />
                     </div>
                 ) : (
                     <p className='p-5'>Loading slides...</p>
                 )}
             </section>
             {/* Beschrijf dit in je projecten. Laat zien dat je dit in je projecten kunt doen. Som het later op! */}
+            
+            {/* Section Contact */}
+            <section>
+                <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='contactTitle' defaultMessage="Contact" /></h2>
+                
+                <hr />
+                
+                <p className='p-5'>
+                    <FormattedMessage
+                        id='contacts'
+                        values={{
+                            mail: (chunks) => <a href="mailto:dylanschoop@gmail.com">{chunks}</a>,
+                            linkedIn: (chunks) => <a target="_blank" className='underline text-orange-700' href="https://www.linkedin.com/in/dylan-schoop-b5b753174/" rel="noopener noreferrer">{chunks}</a>,
+                            instagram: (chunks) => <a target="_blank" className='underline text-orange-700' href="https://www.instagram.com/dylan_cmgt/" rel="noopener noreferrer">{chunks}</a>
+                        }}
+                        defaultMessage={
+                            `U kunt mij bereiken via <mail>dylanschoop@gmail.com</mail> of bezoek mijn socials
+                            <linkedIn>LinkedIn</linkedIn> en <instagram>Instagram</instagram>.`
+                        }
+                    />
+                </p>
+            </section>
 
-            {/* Section Projects */}
-            <section className='min-h-screen flex flex-col' id="projects">
+            {/* Example Slides-section */}
+            {/* <section className='min-h-screen flex flex-col' id="projects">
                 <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='projectsTitle' defaultMessage="Projecten" /></h2>
                 
                 <hr />
@@ -128,12 +174,7 @@ function Home() {
                 ) : (
                     <p className='p-5'>Loading slides...</p>
                 )}
-            </section>
-            {/* Verander om dat je minder hoeft te klikken. Misschien naar nieuwe pagina navigeren. Laat hierin zien wat je kunt! */}
-            {/* Toon projecten waar je trots op bent! Andere projecten kun je tonen in de een Overig lijst */}
-            {/* Haal links eruit. Werken toch niet. Gebruik afbeeldingen. */}
-
-            {/* Reflecteer welke vaardigheden je hebt opgedaan door je projecten. */}
+            </section> */}
         </main>
     );
 }

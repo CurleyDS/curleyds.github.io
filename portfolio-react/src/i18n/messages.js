@@ -14,16 +14,17 @@ export const messages = {
             Als Creative Developer heb ik kennis opgedaan van programmeren en ontwikkelen. Ik
             heb ervaring met HTML, CSS, Javascript, PHP en SQL, evenals frameworks zoals React,
             Vue.js, Laravel en Node.js. Ook heb ik een beetje ervaring met Python en Unity. Mijn
-            meest recente project is een app die gebruikmaakt van Gamificatie.
+            meest recente project is een app die gebruik maakt van Gamificatie.
 
             Mijn hobby's zijn sporten, gamen, shows kijken, tekenen, naar muziek te luisteren
             en af en toe gitaar te spelen. Mijn doel is om van deze hobby's en creativiteit
             gebruik te maken in Serious Games.`,
+        projectsTitle: "Projecten",
+        recentProjects: "Hier zijn mijn meest recente projecten waar ik aan heb gewerkt:",
+        bestProjects: "Hier zijn mijn beste projecten waar ik aan heb gewerkt:",
         skillsTitle: "Vaardigheden",
         coding: "Ik ben vaardig in het gebruik van codeertalen en/of frameworks:",
         frameworks: "Ik heb ook wat ervaring met andere codeertalen en/of frameworks:",
-        projectsTitle: "Projecten",
-        projects: "Dit zijn projecten waar ik aan heb gewerkt:",
         contactTitle: "Contact",
         contacts: `U kunt mij bereiken via <mail>dylanschoop@gmail.com</mail> of bezoek mijn socials
             <linkedIn>LinkedIn</linkedIn> en
@@ -50,11 +51,12 @@ export const messages = {
             My hobbies are sports, gaming, watching shows, drawing, listening to music
             and occasionally playing guitar. My goal is to enjoy these hobbies and creativity
             to use in Serious Games.`,
+        projectsTitle: "Projects",
+        recentProjects: "Here are my most recent projects I've worked on:",
+        bestProjects: "Here are my best projects I've worked on:",
         skillsTitle: "Skills",
         coding: "I'm skilled in the use of coding languages and/or frameworks:",
         frameworks: "I have a little experience in working with other coding languages and/or frameworks as well:",
-        projectsTitle: "Projects",
-        projects: "These are projects I've worked on:",
         contactTitle: "Contact",
         contacts: `You can reach me via <mail>dylanschoop@gmail.com</mail> or visit my socials
             <linkedIn>LinkedIn</linkedIn> and

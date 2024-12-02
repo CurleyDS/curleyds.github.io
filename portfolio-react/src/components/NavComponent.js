@@ -41,15 +41,15 @@ function Navbar({ switchLocale }) {
             </button>
             <button
                 className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'
-                onClick={() => navigate('/#skills')}
-            >
-                <FormattedMessage id='navSkills' defaultMessage="Vaardigheden" />
-            </button>
-            <button
-                className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'
                 onClick={() => navigate('/#projects')}
             >
                 <FormattedMessage id='navProjects' defaultMessage="Projecten" />
+            </button>
+            <button
+                className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'
+                onClick={() => navigate('/#skills')}
+            >
+                <FormattedMessage id='navSkills' defaultMessage="Vaardigheden" />
             </button>
             <button
                 className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'

@@ -4,63 +4,54 @@
             "img": "assets/html.jpg",
             "title": "HTML",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/css.jpg",
             "title": "CSS",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/javascript.jpg",
             "title": "JavaScript",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/php.jpg",
             "title": "PHP",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/mysql.jpg",
             "title": "MySQL",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/bootstrap.jpg",
             "title": "Bootstrap",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/vuejs.jpg",
             "title": "Vue.js",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/laravel.jpg",
             "title": "Laravel",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/tailwindcss.jpg",
             "title": "TailwindCSS",
             "desc": null,
-            "project_link": null,
             "github_link": null
         }
     ],
@@ -69,35 +60,30 @@
             "img": "assets/pixijs.jpg",
             "title": "PixiJS",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/excaliburjs.jpg",
             "title": "ExcaliburJS",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/renpy.jpg",
             "title": "Ren'Py",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/expressjs.jpg",
             "title": "Express.js",
             "desc": null,
-            "project_link": null,
             "github_link": null
         },
         {
             "img": "assets/reactjs.jpg",
             "title": "React.js",
             "desc": null,
-            "project_link": null,
             "github_link": null
         }
     ], 
@@ -106,43 +92,43 @@
             "img": "assets/onepager.jpg",
             "title": "Onepager",
             "desc": "Project uit 2021 - 2022",
-            "project_link": "projects/onepager-2021-2022/",
-            "github_link": "https://github.com/CurleyDS/onepager"
+            "github_link": "https://github.com/CurleyDS/onepager",
+            "favoritized": false
         },
         {
             "img": "assets/pepperoniparty.jpg",
             "title": "Pepperoni Party",
             "desc": "Project uit 2021 - 2022",
-            "project_link": "projects/CLE4-2021-2022/",
-            "github_link": "https://github.com/CurleyDS/CLE4"
+            "github_link": "https://github.com/CurleyDS/CLE4",
+            "favoritized": false
         },
         {
             "img": "assets/spacemeteors.jpg",
             "title": "Space Meteors",
             "desc": "Project uit 2022 - 2023",
-            "project_link": "projects/PRG04-2022-2023/",
-            "github_link": "https://github.com/CurleyDS/PRG04-2022-2023"
+            "github_link": "https://github.com/CurleyDS/PRG04-2022-2023",
+            "favoritized": false
         },
         {
             "img": "assets/factorybreakout.jpg",
             "title": "Factory Breakout",
             "desc": "Project uit 2022 - 2023",
-            "project_link": "projects/CLE4-2022-2023/",
-            "github_link": "https://github.com/CurleyDS/CLE4-2023"
+            "github_link": "https://github.com/CurleyDS/CLE4-2023",
+            "favoritized": true
         },
         {
             "img": "assets/youngchoices.jpg",
             "title": "Young Choices",
             "desc": "Project uit 2023 - 2024",
-            "project_link": "https://cmgt.hr.nl/projecten/young-choices",
-            "github_link": "https://github.com/MarkDeKraker/TLE1-Team11"
+            "github_link": "https://github.com/MarkDeKraker/TLE1-Team11",
+            "favoritized": true
         },
         {
             "img": "assets/weetjegezond.jpg",
             "title": "Weetjegezond",
             "desc": "Project uit 2023 - 2024 (Momenteel is dit project Private)",
-            "project_link": "https://weetjegezond.vercel.app/",
-            "github_link": "https://github.com/MikkaDG/weetjegezond"
+            "github_link": "https://github.com/MikkaDG/weetjegezond",
+            "favoritized": true
         }
     ]
 }
