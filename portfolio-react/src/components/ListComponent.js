@@ -1,18 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useIntl } from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function List({ data = [], favorite = false }) {
     const intl = useIntl();
     const currentLocale = intl.locale;
-  
+    
     const [currentKey, setCurrentKey] = useState(null);
 
     const toggleDetails = (key) => {
-        setCurrentKey((prevKey) => (prevKey === key ? null : key));
+        data[key].description && setCurrentKey((prevKey) => (prevKey === key ? null : key));
     };
+
+    const markdownComponents = {
+        img: ({ node, ...props }) => (
+            <img
+                {...props}
+                className="inline-block object-scale-down p-5 max-w-64 h-auto"
+            />
+        ),
+    };
+
+    useEffect(() => {
+        if (currentKey !== null) {
+            const detail = document.getElementById(`detail-${currentKey}`);
+            detail && detail.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [currentKey]);
     
     return (
         <ul>
@@ -45,7 +62,7 @@ function List({ data = [], favorite = false }) {
                         }`}
                     >
                         <div className='flex flex-col'>
-                            <div className='flex justify-center p-5'>
+                            <div id={`detail-${index}`} className='flex justify-center p-5'>
                                 <img src={item.img} alt={item.title} className='object-scale-down h-64' />
                             </div>
                             <div className='flex flex-col p-5 text-left'>
@@ -54,12 +71,17 @@ function List({ data = [], favorite = false }) {
                                 </div>
                                 <div className='flex items-center'>
                                     {item.description && (
-                                        <ReactMarkdown className="text-left">
+                                        <ReactMarkdown className="text-left" components={markdownComponents}>
                                             {item.description[currentLocale]}
                                         </ReactMarkdown>
                                     )}
                                 </div>
                             </div>
+                            <div className='flex justify-end p-5'>
+                                <FontAwesomeIcon icon={faChevronUp} size='2x' onClick={() => toggleDetails(index)} />
+                            </div>
+                            
+                            <hr className='p-5' />
                         </div>
                     </span>
                 </li>

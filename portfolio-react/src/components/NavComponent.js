@@ -53,7 +53,7 @@ function Navbar({ switchLocale }) {
             </button>
             <button
                 className='font-normal text-base w-full text-center p-5 hover:font-semibold hover:text-lg hover:py-4 transition-all'
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/#contact')}
             >
                 <FormattedMessage id='navContact' defaultMessage="Contact" />
             </button>

@@ -139,7 +139,7 @@ function Home() {
             {/* Beschrijf dit in je projecten. Laat zien dat je dit in je projecten kunt doen. Som het later op! */}
             
             {/* Section Contact */}
-            <section>
+            <section id="contact">
                 <h2 className='p-4 text-2xl font-bold'><FormattedMessage id='contactTitle' defaultMessage="Contact" /></h2>
                 
                 <hr />

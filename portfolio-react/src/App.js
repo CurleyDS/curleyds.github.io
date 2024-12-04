@@ -5,7 +5,6 @@ import { IntlProvider } from 'react-intl';
 import { messages } from './i18n/messages';
 import Home from './pages/HomePage';
 import Project from './pages/ProjectPage';
-import Contact from './pages/ContactPage';
 import Navbar from './components/NavComponent';
 import Footer from './components/FooterComponent';
 
@@ -19,7 +18,6 @@ function App({ switchLocale }) {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/projects" element={<Project />} />
-                <Route path="/contact" element={<Contact />} />
             </Routes>
 
             {/* Footer */}
