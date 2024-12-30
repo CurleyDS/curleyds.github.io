@@ -16,10 +16,16 @@ function List({ data = [], favorite = false }) {
     };
 
     const markdownComponents = {
+        p: ({ node, ...props }) => (
+            <p
+                {...props}
+                className='py-1'
+            />
+        ),
         img: ({ node, ...props }) => (
             <img
                 {...props}
-                className="inline-block object-scale-down p-5 max-w-64 h-auto"
+                className="inline-block object-scale-down max-w-[33%] h-auto mx-auto"
             />
         ),
     };

@@ -84,6 +84,7 @@ function Home() {
                             {/* Derde kopje omveranderen dat je een creative developer bent en dat je een meer creatieve kant
                             van Software Development op wilt. Geef later in één zin aan dat je doel eindigt als iemand die Serious Games ontwikkelt. */}
                             {/* Waarvoor heb je voor creativiteit in de opleiding gekozen? */}
+                            {/* Geef je contacten mee (Github, LinkedIn, etc.) */}
                         </p>
                     </div>
                 </div>
